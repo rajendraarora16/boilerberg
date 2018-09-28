@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
+    "heroku-postbuild": "next build",
     "start": "NODE_ENV=production node server.js",
     "eslint-check": "eslint --print-config package.json | eslint-config-prettier-check",
     "prettier": "prettier --ignore-path './.next/*' --config 'package.json' --write '**/*.js'",
