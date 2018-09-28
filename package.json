@@ -13,11 +13,7 @@
   },
   "engines": {
     "node": "8.11.1",
-<<<<<<< HEAD
-    "npm": "5.6.0"
-=======
     "npm" : "5.6.0"
->>>>>>> origin/master
   },
   "eslintConfig": {
     "parser": "babel-eslint",
