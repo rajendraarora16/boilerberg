@@ -93,6 +93,12 @@
       "require-yield": 0
     }
   },
+  "peerDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-hot-middleware": "^2.24.2"
+  },
   "dependencies": {
     "@ikhsaan/create-reducer": "1.0.1",
     "es6-promise": "4.1.1",
@@ -114,12 +120,7 @@
     "redux-saga": "0.16.0",
     "reselect": "^3.0.1",
     "seamless-immutable": "7.1.2",
-    "styled-components": "^2.2.2",
-    "sw-precache-webpack-plugin": "0.11.4",
-    "webpack": "^4.20.2",
-    "webpack-dev-middleware": "^3.4.0",
-    "webpack-dev-server": "^3.1.9",
-    "webpack-hot-middleware": "^2.24.2"
+    "sw-precache-webpack-plugin": "0.11.4"
   },
   "devDependencies": {
     "babel-eslint": "8.0.1",
