@@ -30,7 +30,10 @@ function* loadDataSaga() {
 }
 
 function* appWatcher() {
-  yield all([call(runClockSaga), takeLatest(LOAD_DATA, loadDataSaga)]);
+  yield all([
+    call(runClockSaga), 
+    takeLatest(LOAD_DATA, loadDataSaga)
+  ]);
 }
 
 export default appWatcher;
