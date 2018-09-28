@@ -24,7 +24,7 @@ function Clock({ lastUpdate, light }) {
             background-color: #000;
           }
           .light {
-            background-color: #ffaeae;
+            background-color: #fff;
             color: #000;
           }
         `}

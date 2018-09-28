@@ -24,7 +24,7 @@ class Counter extends PureComponent {
   render() {
     return (
       <Layout>
-        <Page title="Index Page" linkTo="/other" />
+        <Page title="Merchandise" linkTo="/other" />
       </Layout>
     );
   }

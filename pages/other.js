@@ -21,7 +21,7 @@ class Counter extends Component {
   render() {
     return (
       <Layout>
-        <Page title="Other Page" linkTo="/" />
+        <Page title="Order details" linkTo="/" />
       </Layout>
     );
   }

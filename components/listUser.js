@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ListUser({ placeholderData }) {
+  console.log('ListUser: ', placeholderData)
   return (
-    <ul>
-      {placeholderData.map((data) => (
-        <li key={`user-${data.id}`}>{data.name}</li>
-      ))}
-    </ul>
+    <div>
+      <p>Boilerplate</p>
+    </div>
   );
 }
 

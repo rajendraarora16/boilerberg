@@ -41,7 +41,7 @@ class Page extends PureComponent {
     } = this.props;
 
     return (
-      <div>
+      <div className='align'>
         <Title>{title}</Title>
         <Clock lastUpdate={lastUpdate} light={light} />
         <AddCount />
@@ -52,6 +52,13 @@ class Page extends PureComponent {
         </nav>
         {placeholderData && ListUser({ placeholderData })}
         {error && <p style={{ color: 'red' }}>Error: {error.message}</p>}
+        <style jsx>
+        {`
+          .align {
+            text-align:center;
+          }
+        `}
+        </style>
       </div>
     );
   }
