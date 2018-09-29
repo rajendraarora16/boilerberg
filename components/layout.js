@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Layout extends Component {
-  static propTypes = {
-    children: PropTypes.object.isRequired,
-  };
 
   componentDidMount() {
     if ('serviceWorker' in navigator) {
@@ -23,5 +20,9 @@ class Layout extends Component {
     return <div>{this.props.children}</div>;
   }
 }
+
+Layout.propTypes = {
+  children: PropTypes.object.isRequired,
+};
 
 export default Layout;

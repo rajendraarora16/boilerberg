@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { increment, startClock } from '../actions/appAction';
-import { withReduxSaga } from '../store';
+import { connect } from 'react-redux';
 import Layout from '../components/layout';
 import Page from '../components/page';
 
@@ -27,4 +27,7 @@ class Counter extends Component {
   }
 }
 
-export default withReduxSaga(Counter);
+const mapStateToProps = state => ({
+  uData: state
+});
+export default connect(mapStateToProps)(Counter);
