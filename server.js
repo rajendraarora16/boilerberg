@@ -7,15 +7,7 @@ const { parse } = require('url');
 const next = require('next');
 const LRUCache = require('lru-cache');
 
-<<<<<<< Updated upstream
 const dev = process.env.NODE_ENV !== 'production';
-=======
-/**
- * TIER is used for bookmyshow's server, in case of other server make sure we are using 
- * "process.env.NODE_ENV"
- */
-const dev = process.env.TIER !== 'production';
->>>>>>> Stashed changes
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
