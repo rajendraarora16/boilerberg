@@ -1,10 +1,12 @@
 import App, { Container } from 'next/app';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { withReduxSaga } from '../store';
+import withRedux from 'next-redux-wrapper';
+import withReduxSaga from 'next-redux-saga';
+import configureStore from '../store';
 
 class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -26,4 +28,4 @@ class MyApp extends App {
   }
 }
 
-export default withReduxSaga(MyApp);
+export default withRedux(configureStore)(withReduxSaga({ async: true })(MyApp));

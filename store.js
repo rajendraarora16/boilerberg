@@ -1,13 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import withRedux from 'next-redux-wrapper';
-import nextReduxSaga from 'next-redux-saga';
 import createSagaMiddleware from 'redux-saga';
 import Immutable from 'seamless-immutable';
-
 import rootReducer from './reducers';
 import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
+
 const dev = process.env.NODE_ENV !== 'production';
 const windowExist = typeof window === 'object';
 
@@ -29,10 +27,15 @@ export function configureStore(initialState = {}) {
     composeEnhancers(applyMiddleware(sagaMiddleware))
   );
 
-  store.sagaTask = sagaMiddleware.run(rootSaga);
+/**
+ * Run the root saga initially
+ */
+  store.runSagaTask = () => {
+    store.sagaTask = sagaMiddleware.run(rootSaga)
+  }
+
+  store.runSagaTask()
   return store;
 }
 
-export function withReduxSaga(BaseComponent) {
-  return withRedux(configureStore)(nextReduxSaga(BaseComponent));
-}
+export default configureStore;

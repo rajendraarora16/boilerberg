@@ -67,7 +67,7 @@ app
     /* eslint-disable no-console */
     server.listen(port, (err) => {
       if (err) throw err;
-      console.log('Dev running on http://localhost:3000');
+      console.log('DEV server running at http://localhost:3000');
     });
   })
   .catch((ex) => {
