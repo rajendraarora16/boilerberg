@@ -7,7 +7,7 @@ const { parse } = require('url');
 const next = require('next');
 const LRUCache = require('lru-cache');
 
-const dev = process.env.TIER !== 'production';
+const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
