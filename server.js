@@ -3,7 +3,6 @@ const Router = require('koa-router');
 const cors = require('@koa/cors');
 const cookiesMiddleware = require('universal-cookie-koa')
 const { join } = require('path');
-const { parse } = require('url');
 const next = require('next');
 const LRUCache = require('lru-cache');
 
