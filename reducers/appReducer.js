@@ -1,9 +1,9 @@
 import { FAILURE, INCREMENT, LOAD_DATA_SUCCESS, TICK_CLOCK } from '../constants/appConstant';
-import { GlobalState } from './rootState'
+import { globalState } from './rootState'
 
 const increment = (count) => count + 1;
 
-function appReducer(state = GlobalState, action) {
+function appReducer(state = globalState, action) {
 
   switch(action.type) {
     
