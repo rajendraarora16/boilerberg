@@ -1,5 +1,5 @@
 import { FAILURE, INCREMENT, LOAD_DATA_SUCCESS, TICK_CLOCK } from '../constants/appConstant';
-import { GlobalState } from './globalState'
+import { GlobalState } from './rootState'
 
 const increment = (count) => count + 1;
 
